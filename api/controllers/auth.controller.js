@@ -14,6 +14,7 @@ export const signup = async (req, res, next) => {
     next(err);
   }
 };
+
 export const singin = async (req, res, next) => {
   const { email, password } = req.body;
   try {
@@ -32,6 +33,7 @@ export const singin = async (req, res, next) => {
     next(error);
   }
 };
+
 export const google = async (req, res, next) => {
   try {
     const user = await User.findOne({ email: req.body.email });
